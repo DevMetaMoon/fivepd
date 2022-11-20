@@ -1,0 +1,98 @@
+FivePD v1.5 - Release Notes
+Released on July 24, 2021
+Table of contents
+IMPORTANT - OneSync Compatibility Notice
+In previous versions of the gamemode, FivePD was not considerd OneSync
+compatible. Recently, modifications were made to allow basic interoperability
+between FivePD and OneSync. Now, thanks to many improvements and
+changes in v1.5, we are happy to say that FivePD now offically recommends
+OneSync be enabled and used for syncing. Ped, vehicle, and service spawning
+have all been reworked to better support compatibility.
+Please note that some features may be disabled if you have OneSync turned
+off.
+Updating from v1.4.1
+Replace the following files / folders:
+computer folder
+FivePD_client.net.dll file
+FivePD_server.net.dll file
+FivePD.net.dll file
+Remove the following files / folders:
+__resource.lua file
+Add the following files / folders:
+fxmanifest.lua file
+IMPORTANT - OneSync Compatibility Notice
+Updating from v1.4.1
+Fixes and Improvements
+Additions
+API Changes
+FivePD v1.5 - Release Notes 2
+config/garage.json file
+Make sure to replace your languages/en.json and/or copy-paste the
+"AdminMenu" section to your translation file!
+Fixes and Improvements
+Corrected an issue with the "Animal Control" service
+Corrected issues which caused MDT related console warnings including:
+"Attempt to spread non-iterable"
+"Unhandled promise rejection"
+"Uncaught type error"
+Corrected an issue where attempting to stop another player's ped would
+result in an improper action being carried out
+Corrected an issue with the observation system
+Corrected an issue when attempting to cancel the "Mechanic" service
+Corrected an issue when the "Prisoner Transport" service is complete
+Corrected an issue where non-authorized players could access FivePD
+Improved the ability to perform traffic stops on larger vehicles
+Improved the ability to perform traffic stops on vehicles with trailers
+attached
+Corrected an issue where player-owned objects would occasionally not be
+properly removed on game exit
+Corrected an issue where players occasionally could get wanted level
+Improved numerous subsystems to allow for improved OneSync
+compatibility
+Removed the introductory screen on first join after consultation with the
+community
+Improved the notification which online players receive when another player
+leaves the department
+FivePD v1.5 - Release Notes 3
+Switched from the legacy resource definition file to the newer variant
+Additional bug fixes and improvements
+Additions
+Added official recommended support for OneSync. Many of the core
+systems in the gamemode have been reworked to yield better support for
+the engine.
+Added an intuitive method to view the last known location of a vehicle
+currently involved in a pursuit, which is now displayed after the vehicle has
+left an area around involved players
+Added ability to customize the livery of service vehicles. More information
+is available in the "Configuration Guide" included with FivePD. Legacy
+versions of the configuration file are still compatible with v1.5
+A legacy feature has been reintroduced, adding the ability to designate a
+location for players to spawn once connected. More information is available
+in the "Configuration Guide" included with FivePD
+Added the ability to define garages in the config/garage.json file. Added
+vehicles will spawn at designated locations and be available to FivePD
+players. Vehicles in this file will be constantly respawned to ensure
+availabilty
+Added the ability to prevent AI from running, ramming and to ignore
+players. More information is available in the "Configuration guide" included
+with FivePD
+Added a new sub-menu in the Duty menu, accessible to FivePD admins.
+This menu will be used to contain several new administrator features in
+future updates. It currently contains the following:
+Garage sub-menu: Allows administrators to control garages around the
+game map
+Development Tools sub-menu: Contains utilities for callout and plugin
+developers. Example: Just press the 'Save current position' button and
+your position, heading and the selected ped model will be saved into a
+FivePD v1.5 - Release Notes 4
+txt file in the fivepd folder in a format which you can copy-paste into
+the API's SpawnPed method ;)
+API Changes
+Added custom attribute restrictions ( CalloutPropertiesAttribute )
+Added SetPlayerData() method. Currently supports:
+Department changes
+Department kicks
+Callsign changes
+Added methods to get the passengers of the current traffic stop’s vehicle:
+GetTrafficStopDriver()
+GetTrafficStopVehicleOccupants()
